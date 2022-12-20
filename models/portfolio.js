@@ -1,5 +1,18 @@
 const mongoose = require('mongoose');
 
+const infoSchema = new mongoose.Schema({
+    email:{
+        type: String,
+        required: true,
+    },
+    linkedin:{
+        type: String
+    },
+    github:{
+        type: String
+    }
+})
+
 const headerSchema = new mongoose.Schema({
     Name: {
         type: String,
@@ -112,11 +125,10 @@ const PortfolioSchema = new mongoose.Schema({
         type: 'string',
         required: true,
     },
-    password: {
-        type: 'string',
-        required: true,
-    },
-    header:[headerSchema],
+
+    info: infoSchema,
+
+    header: headerSchema,
 
     experience: [experienceSchema],
 

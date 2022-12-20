@@ -19,5 +19,8 @@ router.get('/portfolios', async (res) => {
     res.send(content);
 });
 
-
+router.post("/contactme", async (req, res) => {
+    const content = await portfolioService.sendEmail(req);
+    res.send(content);
+});
 module.exports = router;

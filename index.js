@@ -42,8 +42,12 @@ app.use(exceptionHandler);
 
 //----------------------------testing----------------------------//
 const testData = {
-  "username": "user1",
-  "password": "user1pass",
+  "username": "xiaopei",
+  "info":{
+    "email": "pxtoday@hotmail.com",
+    "linkedin": "https://www.linkedin.com/in/xiao-pei-508aab258/",
+    "github": "https://github.com/xiaoxiao-pei"
+  },
   "header": {
     "Name": "John Smith",
     "Title": "Full stack developer",
@@ -124,7 +128,6 @@ const testData = {
     }
   ]
 }
-console.log(testData);
 
 const portfolioModel = require('./models/portfolio');
 portfolioModel.create(testData);
